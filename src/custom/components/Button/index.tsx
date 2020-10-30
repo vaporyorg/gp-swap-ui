@@ -20,6 +20,8 @@ import {
   // We don't import the "composite" buttons, they are just redefined (c&p actually)
 } from './ButtonMod'
 
+// ------------------------ Basic Buttons (Override styles from ./ButtonMod.tsx) ------------------------
+
 export const ButtonPrimary = styled(ButtonPrimaryMod)`
   // CSS overrides
   &:focus,
@@ -85,6 +87,8 @@ export const ButtonErrorStyle = styled(ButtonErrorStyleMod)`
 export const ButtonEmpty = styled(ButtonEmptyMod)`
   // CSS overrides
 `
+
+// ------------------------ Composite buttons (C&P from ./ButtonMod.tsx) ------------------------
 
 export function ButtonConfirmed({
   confirmed,
