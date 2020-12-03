@@ -4,7 +4,7 @@ import { useLocation } from 'react-router'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'
 import useParsedQueryString from '../../hooks/useParsedQueryString'
-import useToggledVersion, { DEFAULT_VERSION, Version } from '../../hooks/useToggledVersion'
+import useToggledVersion, { DEFAULT_VERSION, Version } from 'hooks/useToggledVersion'
 
 import { StyledInternalLink } from 'theme'
 import { YellowCard } from '../Card'
