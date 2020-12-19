@@ -1651,10 +1651,10 @@
     "@ethersproject/properties" "^5.0.3"
     "@ethersproject/strings" "^5.0.4"
 
-"@gnosis.pm/gp-v2-contracts@^0.0.1-alpha.8":
-  version "0.0.1-alpha.9"
-  resolved "https://registry.yarnpkg.com/@gnosis.pm/gp-v2-contracts/-/gp-v2-contracts-0.0.1-alpha.9.tgz#afcefcb8f898528189bca52332a8336c2cdb7959"
-  integrity sha512-pQVfp6EB4ucLYKIgedDG+oUsm/YTf+qRereKZdnazVa3DDgpMToMWRT1GowIZOIT5Sgz2jWsBzfI2Nn8DErxYQ==
+"@gnosis.pm/gp-v2-contracts@^0.0.1-alpha.11":
+  version "0.0.1-alpha.11"
+  resolved "https://registry.yarnpkg.com/@gnosis.pm/gp-v2-contracts/-/gp-v2-contracts-0.0.1-alpha.11.tgz#dfdbc44c37afcfd3690314159caf454578c538e4"
+  integrity sha512-4XFdG3lU8xiOsJLNSCMPGzl+LWNJImJer4Qa8tjMt3l+DW5RltZX2X1ad4foRUshQJAdk5Fwxy5y8B8qViZWNQ==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -2728,19 +2728,6 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@uniswap/merkle-distributor/-/merkle-distributor-1.0.1.tgz#dc3d911f65a860fc3f0cae074bdcd08ed6a27a4d"
   integrity sha512-5gDiTI5hrXIh5UWTrxKYjw30QQDnpl8ckDSpefldNenDlYO1RKkdUYMYpvrqGi2r7YzLYTlO6+TDlNs6O7hDRw==
-
-"@uniswap/sdk@3.0.3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@uniswap/sdk/-/sdk-3.0.3.tgz#8201c7c72215d0030cb99acc7e661eff895c18a9"
-  integrity sha512-t4s8bvzaCFSiqD2qfXIm3rWhbdnXp+QjD3/mRaeVDHK7zWevs6RGEb1ohMiNgOCTZANvBayb4j8p+XFdnMBadQ==
-  dependencies:
-    "@uniswap/v2-core" "^1.0.0"
-    big.js "^5.2.2"
-    decimal.js-light "^2.5.0"
-    jsbi "^3.1.1"
-    tiny-invariant "^1.1.0"
-    tiny-warning "^1.0.3"
-    toformat "^2.0.0"
 
 "@uniswap/token-lists@^1.0.0-beta.17":
   version "1.0.0-beta.17"
@@ -15058,6 +15045,19 @@ unist-util-visit@^1.1.0, unist-util-visit@^1.3.0:
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
   dependencies:
     unist-util-visit-parents "^2.0.0"
+
+uniswap-xdai-sdk@^3.0.2-a3:
+  version "3.0.2-a3"
+  resolved "https://registry.yarnpkg.com/uniswap-xdai-sdk/-/uniswap-xdai-sdk-3.0.2-a3.tgz#8c27224ca4fd0cda30c09e816fb7c29e866e27ce"
+  integrity sha512-QV436m/u5yJztqvcadmn2P9AfPtmhFgQ4N6bHqaYbbN2ktyrDtsdXIvVzOnTH9s1gIjjTEmFYOFrwJCN1bR2zA==
+  dependencies:
+    "@uniswap/v2-core" "^1.0.0"
+    big.js "^5.2.2"
+    decimal.js-light "^2.5.0"
+    jsbi "^3.1.1"
+    tiny-invariant "^1.1.0"
+    tiny-warning "^1.0.3"
+    toformat "^2.0.0"
 
 universalify@^0.1.0:
   version "0.1.2"

@@ -1,4 +1,4 @@
-import { ChainId } from '@uniswap/sdk'
+import { ChainId } from 'uniswap-xdai-sdk'
 import { OrderCreation } from 'utils/signatures'
 import { APP_ID } from 'constants/index'
 import { registerOnWindow } from './misc'
@@ -9,8 +9,8 @@ import { registerOnWindow } from './misc'
  */
 const API_BASE_URL: Partial<Record<ChainId, string>> = {
   [ChainId.MAINNET]: 'https://protocol.gnosis.io/api/v1',
-  [ChainId.RINKEBY]: 'https://protocol-rinkeby.dev.gnosisdev.com/api/v1'
-  // [ChainId.xDAI]: 'https://protocol-xdai.dev.gnosisdev.com/api/v2'
+  [ChainId.RINKEBY]: 'https://protocol-rinkeby.dev.gnosisdev.com/api/v1',
+  [ChainId.XDAI]: 'https://protocol-xdai.dev.gnosisdev.com/api/v1'
 }
 
 const DEFAULT_HEADERS = {

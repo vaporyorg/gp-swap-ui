@@ -1,13 +1,13 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { Contract } from '@ethersproject/contracts'
-import { JSBI, Percent, Router, SwapParameters, Trade, TradeType } from '@uniswap/sdk'
+import { JSBI, Percent, Router, SwapParameters, Trade, TradeType } from 'uniswap-xdai-sdk'
 import { useMemo } from 'react'
 import { BIPS_BASE, INITIAL_ALLOWED_SLIPPAGE } from '../constants'
 import { getTradeVersion, useV1TradeExchangeAddress } from '../data/V1'
 import { useTransactionAdder } from '../state/transactions/hooks'
 import { calculateGasMargin, getRouterContract, isAddress, shortenAddress } from '../utils'
 import isZero from '../utils/isZero'
-import v1SwapArguments from '../utils/v1SwapArguments'
+//import v1SwapArguments from '../utils/v1SwapArguments'
 import { useActiveWeb3React } from './index'
 import { useV1ExchangeContract } from './useContract'
 import useTransactionDeadline from './useTransactionDeadline'
@@ -75,7 +75,7 @@ function useSwapCallArguments(
             feeOnTransfer: false,
             allowedSlippage: new Percent(JSBI.BigInt(allowedSlippage), BIPS_BASE),
             recipient,
-            deadline: deadline.toNumber()
+            ttl: deadline.toNumber()
           })
         )
 
@@ -85,19 +85,15 @@ function useSwapCallArguments(
               feeOnTransfer: true,
               allowedSlippage: new Percent(JSBI.BigInt(allowedSlippage), BIPS_BASE),
               recipient,
-              deadline: deadline.toNumber()
+              ttl: deadline.toNumber()
             })
           )
         }
         break
       case Version.v1:
-        swapMethods.push(
-          v1SwapArguments(trade, {
-            allowedSlippage: new Percent(JSBI.BigInt(allowedSlippage), BIPS_BASE),
-            recipient,
-            deadline: deadline.toNumber()
-          })
-        )
+        // swapMethods.push(
+        //   v1SwapArguments(trade, {feeOnTransfer: 0.1})
+        // )
         break
     }
     return swapMethods.map(parameters => ({ parameters, contract }))

@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WETH as WETHuni } from '@uniswap/sdk'
+import { ChainId, JSBI, Percent, Token, WETH as WETHuni } from 'uniswap-xdai-sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
