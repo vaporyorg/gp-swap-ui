@@ -1,10 +1,11 @@
 import { AddressZero } from '@ethersproject/constants'
+import { WETH_XDAI } from '@src/constants'
 import {
   BigintIsh,
   Currency,
   CurrencyAmount,
   currencyEquals,
-  ETHER,
+  // ETHER,
   JSBI,
   Pair,
   Percent,
@@ -25,7 +26,7 @@ import { useETHBalances, useTokenBalance, useTokenBalances } from '../state/wall
 
 const WETH = {
   ...WETHuni,
-  100: new Token(100, '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1', 18, 'WETH', 'Wrapped Ether on xDai')
+  100: WETH_XDAI
 }
 
 export function useV1ExchangeAddress(tokenAddress?: string): string | undefined {
@@ -84,7 +85,8 @@ export function useUserHasLiquidityInAllTokens(): boolean | undefined {
 
   const v1ExchangeLiquidityTokens = useMemo(
     () =>
-      chainId ? Object.keys(exchanges).map(address => new Token(chainId, address, 18, 'UNI-V1', 'Uniswap V1')) : [],
+      // chainId ? Object.keys(exchanges).map(address => new Token(chainId, address, 18, 'UNI-V1', 'Uniswap V1')) : [],
+      chainId ? Object.keys(exchanges).map(address => new Token(chainId, address, 18, 'UNI-V1', 'Honeyswap V1')) : [],
     [chainId, exchanges]
   )
 
@@ -113,8 +115,8 @@ export function useV1Trade(
   const inputPair = useMockV1Pair(inputCurrency)
   const outputPair = useMockV1Pair(outputCurrency)
 
-  const inputIsETH = inputCurrency === ETHER
-  const outputIsETH = outputCurrency === ETHER
+  const inputIsETH = inputCurrency === WETH_XDAI
+  const outputIsETH = outputCurrency === WETH_XDAI
 
   // construct a direct or through ETH v1 route
   let pairs: Pair[] = []
