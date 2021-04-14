@@ -13,13 +13,15 @@ import HeaderMod, {
   HeaderElement,
   HideSmall,
   BalanceText,
-  AccountElement
+  AccountElement,
+  HeaderElementWrap
 } from './HeaderMod'
 import styled from 'styled-components'
 import { status as appStatus } from '@src/../package.json'
 import { useActiveWeb3React } from 'hooks'
 import { useETHBalances } from 'state/wallet/hooks'
 import { SHORT_PRECISION } from 'constants/index'
+import Menu from 'components/Menu'
 
 export const NETWORK_LABELS: { [chainId in ChainId]?: string } = {
   [ChainId.RINKEBY]: 'Rinkeby',
@@ -130,12 +132,12 @@ export default function Header() {
             <Web3Status />
           </AccountElement>
         </HeaderElement>
-        {/* <HeaderElementWrap>
-          <StyledMenuButton onClick={() => toggleDarkMode()}>
+        <HeaderElementWrap>
+          {/* <StyledMenuButton onClick={() => toggleDarkMode()}>
             {darkMode ? <Moon size={20} /> : <Sun size={20} />}
-          </StyledMenuButton>
+          </StyledMenuButton> */}
           <Menu />
-        </HeaderElementWrap> */}
+        </HeaderElementWrap>
       </HeaderControls>
     </HeaderModWrapper>
   )
