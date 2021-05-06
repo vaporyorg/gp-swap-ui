@@ -203,7 +203,7 @@ function toApiAddress(address: string, chainId: ChainId): string {
   return address
 }
 
-async function _getJson(chainId: ChainId, url: string): Promise<any> {
+async function _getJson<T>(chainId: ChainId, url: string): Promise<T> {
   let response: Response | undefined
   try {
     const responseMaybeOk = await _fetchGet(chainId, url)
