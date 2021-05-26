@@ -1689,6 +1689,11 @@
     "@ethersproject/properties" "^5.1.0"
     "@ethersproject/strings" "^5.1.0"
 
+"@gnosis.pm/cow-runner-game@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@gnosis.pm/cow-runner-game/-/cow-runner-game-0.2.2.tgz#b349055ae22ec5e5cd91c5292983038761683c4a"
+  integrity sha512-tXjmOMpzgDYr72K1dzlHRNhwDAshxadCWWfSvUj5OiV4w/QNK/bpCBXQWth+OjB0+aLgV8SvXqZKtozY0EQ2CQ==
+
 "@gnosis.pm/gp-v2-contracts@^0.0.1-alpha.17":
   version "0.0.1-alpha.17"
   resolved "https://registry.yarnpkg.com/@gnosis.pm/gp-v2-contracts/-/gp-v2-contracts-0.0.1-alpha.17.tgz#5c3e08b4a761d13383af631cee255cc7645aa50a"
